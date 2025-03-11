@@ -4,8 +4,9 @@
   let { children } = $props();
 </script>
 
-<!-- Main app container -->
-<div class="flex flex-col h-screen bg-gray-100">
-  {@render children()}
-  <NavBar />
+<div class="h-screen w-screen flex justify-center">
+  <div class="flex flex-col h-full bg-gray-100 max-w-[430px]">
+    {@render children()}
+    <NavBar />
+  </div>
 </div>

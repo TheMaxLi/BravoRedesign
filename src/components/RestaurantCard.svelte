@@ -20,7 +20,11 @@
 
 <div class="rounded-3xl overflow-hidden shadow-lg">
   <div class="relative">
-    <img src={thumbnail} alt="Italian dish" class="w-full h-48 object-cover" />
+    <img
+      src={thumbnail}
+      alt="{restaurantName} Thumbnail"
+      class="w-full h-48 object-cover"
+    />
     <div
       class="absolute top-4 left-4 bg-white rounded-full px-4 py-1 text-sm text-teal-600 font-medium"
     >
@@ -36,7 +40,7 @@
         <img
           src={logoImg}
           alt="{restaurantName} logo"
-          class="w-12 h-12 object-contain"
+          class="w-12 h-12 object-contain rounded-full"
         />
       </div>
       <div class="ml-4">
