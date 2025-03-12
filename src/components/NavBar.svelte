@@ -4,28 +4,37 @@
   import IconStorefrontRegular from "phosphor-icons-svelte/IconStorefrontRegular.svelte";
   import IconHouseRegular from "phosphor-icons-svelte/IconHouseRegular.svelte";
   import IconUserRegular from "phosphor-icons-svelte/IconUserRegular.svelte";
+  import { page } from "$app/state";
 </script>
 
 <div
-  class="flex justify-between items-center px-6 py-4 bg-white border-t border-gray-200"
+  class="fixed bottom-0 w-full flex justify-between items-center px-6 py-4 bg-white border-t border-gray-200"
 >
-  <a class="flex flex-col items-center" href="/home">
-    <IconHouseRegular class="text-4xl text-[#B4B4B4]" />
+  <a class="flex flex-col items-center" href="/">
+    <IconHouseRegular
+      class="text-4xl  {page.url.pathname === '/'
+        ? 'text-teal-500'
+        : 'text-[#B4B4B4]'}"
+    />
   </a>
 
   <a class="flex flex-col items-center" href="/stores">
-    <IconStorefrontRegular class="text-4xl text-[#B4B4B4]" />
+    <IconStorefrontRegular
+      class="text-4xl  {page.url.pathname === '/stores'
+        ? 'text-teal-500'
+        : 'text-[#B4B4B4]'}"
+    />
   </a>
 
-  <a class="flex flex-col items-center" href="/pay">
+  <div class="flex flex-col items-center">
     <IconQrCodeRegular class="text-4xl text-[#B4B4B4]" />
-  </a>
+  </div>
 
-  <a class="flex flex-col items-center" href="/egift">
+  <div class="flex flex-col items-center">
     <IconGiftRegular class="text-4xl text-[#B4B4B4]" />
-  </a>
+  </div>
 
-  <a class="flex flex-col items-center" href="/account">
+  <div class="flex flex-col items-center">
     <IconUserRegular class="text-4xl text-[#B4B4B4]" />
-  </a>
+  </div>
 </div>

@@ -13,6 +13,7 @@
 
   let activeFilter = $state("Explore");
   let filteredRestaurants = $state<Restaurant[]>([]);
+  let search = $state<string>("");
 
   function filterRestaurants(filter: string) {
     activeFilter = filter;
@@ -67,10 +68,10 @@
   });
 </script>
 
-<HeaderSearch />
+<HeaderSearch bind:search />
 
 <div
-  class="flex space-x-[35px] items-center px-6 py-4 overflow-x-auto border-b border-gray-200"
+  class="flex space-x-[35px] items-center px-6 py-3 shadow-xl overflow-x-auto border-gray-200"
 >
   {#each navCategories as category}
     <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -95,7 +96,7 @@
   {/each}
 </div>
 
-<div class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="flex-1 pb-[80px] overflow-y-auto p-4 space-y-6">
   {#if filteredRestaurants.length === 0}
     <div class="text-center py-10 text-gray-500">
       No restaurants found in this category.
