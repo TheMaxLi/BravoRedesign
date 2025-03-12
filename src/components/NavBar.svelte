@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="fixed bottom-0 w-full flex justify-between items-center px-6 py-4 bg-white border-t border-gray-200"
+  class="fixed bottom-0 w-[430px] flex justify-between items-center px-6 py-4 bg-white border-t border-gray-200"
 >
   <a class="flex flex-col items-center" href="/">
     <IconHouseRegular
